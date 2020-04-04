@@ -14,9 +14,9 @@ Two topics need to be present:
 1. `topic1` - expects JSON with a key of `foo`, so `{"foo": "bar"}`
 2. `topic1.DLST` - expects a string like "foo"  - is listening on startup
 
-```$xslt
-.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic topic1
-.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic topic1.DLT
+```
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic topic1
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic topic1.DLT
 ```
 
 Run the Spring boot application which starts on `localhost:8080`.
