@@ -24,14 +24,13 @@ Run the Spring boot application which starts on `localhost:8080`.
 - `topic1` listener has not started as in `@KafkaListener(autoStartup="false")`
 - `topic1.DLT` listener has not started as `@KafkaListener()`'s `autoStartup` value is `"true"` by default
 
-Create a producer from the command line and send a few JSON object to `topic` (which is presently off) which look like:
+Create a producer from the command line and send a few JSON object to `topic1` (which is currently off) and send some messages:
 
 ```
 PS C:\Users\zarar\Tools\kafka_2.13-2.4.1> .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic topic1                                                                                                                     >{"foo": "bar1"}
 >{"foo": "bar2"}
 >{"foo": "bar3"}
 ```
-
 
 Now start the `@KafkaListener` for `topic1` by visiting/CURLing:
 
