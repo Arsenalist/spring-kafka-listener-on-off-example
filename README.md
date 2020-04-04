@@ -21,7 +21,7 @@ Two topics need to be present:
 
 Run the Spring boot application which starts on `localhost:8080`.
 
-- `topic1` listener has not started as in `@KafkaListener(autoStartup="false")`
+- `topic1` listener has not started as `@KafkaListener(autoStartup="false")`
 - `topic1.DLT` listener has not started as `@KafkaListener()`'s `autoStartup` value is `"true"` by default
 
 Create a producer from the command line and send a few JSON object to `topic1` (which is currently off) and send some messages:
